@@ -3,6 +3,7 @@ package com.example.notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.graphics.BitmapFactory
 import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
             // Create the notification
             val builder = NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_launcher_foreground)
+                .setLargeIcon(BitmapFactory.decodeResource(this.resources, R.drawable.ic_launcher_foreground))
                 .setContentTitle("MyNotification title")
                 .setContentText("MyNotification text")
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
